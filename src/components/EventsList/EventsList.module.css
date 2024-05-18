@@ -1,0 +1,10 @@
+.events_list {
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+    flex-grow: 1;
+}
+
+.hidden_div {
+    visibility: hidden;
+}

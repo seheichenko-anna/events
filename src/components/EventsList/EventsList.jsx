@@ -1,21 +1,42 @@
 import { useSelector } from 'react-redux';
 import { selectEvents } from '../../redux/eventsSlice';
 import EventsItem from './EventsItem/EventsItem';
+import s from './EventsList.module.css';
 
-const EventsList = () => {
+const EventsList = ({ lastEventElementRef }) => {
   const events = useSelector(selectEvents);
 
   return (
-    <ul>
-      {events.map(({ _id, title, event_date, organizer }) => (
-        <EventsItem
-          key={_id}
-          title={title}
-          event_date={event_date}
-          organizer={organizer}
-        />
-      ))}
-    </ul>
+    <>
+      <ul className={s.events_list}>
+        {events.map((event, index) => {
+          if (events.length === index + 1) {
+            return (
+              <EventsItem
+                key={event._id}
+                id={event._id}
+                title={event.title}
+                event_date={event.event_date}
+                organizer={event.organizer}
+                description={event.description}
+                lastEventElementRef={lastEventElementRef}
+              />
+            );
+          } else {
+            return (
+              <EventsItem
+                key={event._id}
+                id={event._id}
+                title={event.title}
+                event_date={event.event_date}
+                organizer={event.organizer}
+                description={event.description}
+              />
+            );
+          }
+        })}
+      </ul>
+    </>
   );
 };
 

@@ -1,0 +1,36 @@
+.sort_wrapper {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 20px;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.select_wrapper {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.select_wrapper select {
+    padding: 4px 12px;
+    border-radius: 8px;
+    font-size: inherit;
+    border-color: #03AED2;
+    color: #03AED2;
+    cursor: pointer;
+    outline: transparent;
+}
+
+.order_btn {
+    background-color: #03AED2;
+    border: transparent;
+    padding: 6px;
+    border-radius: 4px;
+    opacity: 0.8;
+    transition: opacity 0.3s ease-out;
+
+    &&:hover {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,23 @@
+.event_title {
+    margin: 20px 0;
+    font-size: 48px;
+    font-family: "Poetsen One", sans-serif;
+}
+
+.participants_section {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 16px;
+
+    @media screen and (min-width: 1400px) {
+        max-width: 1400px;
+    }
+
+    @media screen and (min-width:1200px) and (max-width:1399px) {
+        max-width: 1200px;
+    }
+
+    @media screen and (min-width:600px) and (max-width:1199px) {
+        max-width: 600px;
+    }
+}

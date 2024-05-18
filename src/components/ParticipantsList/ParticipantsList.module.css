@@ -1,0 +1,15 @@
+.participants_list {
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+}
+
+.no_participants {
+    text-align: center;
+    font-size: 32px;
+}
+
+.spinner_wrapper {
+    display: flex;
+    justify-content: center;
+}

@@ -1,0 +1,27 @@
+.participant {
+    width: 100%;
+    min-width: 200px;
+    height: 200px;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: #FEEFAD;
+
+
+    @media screen and (min-width:600px) {
+        width: calc((100% - 32px) / 2);
+    }
+
+
+    @media screen and (min-width: 1200px) {
+        width: calc((100% - 64px) / 3);
+    }
+
+    @media screen and (min-width: 1400px) {
+        width: calc((100% - 96px) / 4);
+    }
+}

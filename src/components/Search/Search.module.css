@@ -1,0 +1,33 @@
+.search_form {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 4px;
+    flex-wrap: wrap;
+}
+
+.search_input {
+    padding: 4px 12px;
+    border-radius: 8px;
+    font-size: inherit;
+    border: 1px solid #03AED2;
+    outline: transparent;
+    height: 32px;
+}
+
+.search_btn {
+    padding: 4px 12px;
+    border-radius: 8px;
+    font-size: inherit;
+    border: transparent;
+    background-color: #03AED2;
+    outline: transparent;
+    height: 32px;
+    color: #fff;
+    opacity: 0.8;
+    transition: opacity 0.3s ease-out;
+
+    &&:hover {
+        opacity: 1;
+    }
+}
