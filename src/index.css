@@ -27,6 +27,7 @@ button {
 
 body {
   font-family: "Roboto Condensed", sans-serif;
+  margin: 0;
 }
 
 .loader {

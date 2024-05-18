@@ -1,6 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
 import { Suspense, lazy } from 'react';
 import { ThreeCircles } from 'react-loader-spinner';
+import NotFound from './pages/NotFound/NotFound';
 
 const Events = lazy(() => import('./pages/Events/Events'));
 const Participants = lazy(() => import('./pages/Participants/Participants'));
@@ -28,6 +29,7 @@ function App() {
           <Route path="/" element={<Events />} />
           <Route path=":id/participants" element={<Participants />} />
           <Route path=":id/registration" element={<Registration />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>
     </>

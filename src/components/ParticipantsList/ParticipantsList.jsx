@@ -1,5 +1,4 @@
 import { useSelector } from 'react-redux';
-
 import { selectIsLoading, selectParticipants } from '../../redux/eventsSlice';
 import ParticipantsItem from './Participantsitem/ParticipantsItem';
 import s from './ParticipantsList.module.css';
