@@ -5,6 +5,8 @@ import { useDispatch } from 'react-redux';
 import { addParticipantThunk } from '../../redux/operations';
 import { registrationSchema } from '../../schemas/validationForm';
 import { joiResolver } from '@hookform/resolvers/joi';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const RegistrationForm = () => {
   const navigate = useNavigate();
@@ -21,10 +23,14 @@ const RegistrationForm = () => {
     resolver: joiResolver(registrationSchema),
   });
 
-  const onSubmit = data => {
-    dispatch(addParticipantThunk({ data, id }));
-    reset();
-    navigate('/');
+  const onSubmit = async data => {
+    try {
+      await dispatch(addParticipantThunk({ data, id })).unwrap();
+      toast.success('Registration successful!');
+      reset();
+    } catch (error) {
+      toast.error('You are already registered.');
+    }
   };
 
   const handleCancel = () => {
